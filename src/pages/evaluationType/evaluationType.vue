@@ -1,13 +1,21 @@
 <template>
-    <h3>
-        这里是评价{{currentRoute}}管理
-    </h3>
+    <div class="container">
+        <h3>
+            这里是评价类型管理
+        </h3>
+        <EvaluationType></EvaluationType>
+    </div>
 </template>
 <script>
+import EvaluationType from '@/components/evaluationType/evaluationType';
     export default {
         name: "evaluateObject",
         data() {
-            return {currentRoute: this.$route.path};
+            console.log(this.$route.path)
+            return {currentRoute: this.$route.path};           
+        },
+        components:{
+            EvaluationType
         },
         watch: {
             //监听路由，只要路由有变化(路径，参数等变化)都有执行下面的函数
@@ -20,9 +28,18 @@
         }
     };
 </script>
-<style scoped="scoped">
-    h3 {
-        margin-top: 10px;
-        font-weight: normal;
+<style lang="less" scoped="scoped">
+    .container{
+        box-sizing: border-box;
+        width:100%;
+        height:100%;
+        background:rgba(235, 241, 246, 1);
+        padding-left:20px;
+        h3 {
+            height:70px;
+            line-height:70px;
+            font-weight: normal;
+        }
     }
+    
 </style>
