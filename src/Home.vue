@@ -1,73 +1,62 @@
 <template>
     <div class="home">
-        <div class="header">
-            <div class="header-left">人机工程主观评价系统</div>
-            <div class="header-right">退出</div>
+        <div class="header-container">
+            <Header></Header>
         </div>
-        <div class="container-wrapper">
-            <div class="side-bar">
-                <Tree-view></Tree-view>
-            </div>
-            <div class="continer">
-                <router-view></router-view>
-            </div>
+        <div class="side-bar">
+            <Tree-view></Tree-view>
+        </div>
+        <div class="continer">
+            <router-view></router-view>
         </div>
     </div>
 </template>
 <script>
 import TreeView from "./TreeView";
+import Header from "@/components/common/header";
 export default {
     components: {
-        TreeView
+        TreeView,
+        Header
     },
     name: "Home"
 };
 </script>
 <style scoped>
-.home{
-    width: 100%;
-    height: 100%;
-}
-.header{
-    height: 20px;
-    width: 100%;
+.header-container{
+    position : fixed ;
+    top: 0;
+    left: 0;
+    right: 0;
+    height : 100px;
+    line-height: 100px;
     background: blue;
-    
-}
-.header::after{
+};
+.header-container::after{
     content: "";
     display: block;
-    overflow: hidden; 
-    clear: both;
     height: 0;
-}
-.header-left{
-    float: left;
-    width: 300px;
-    height: 100%;
-    text-align: center;
-    background: skyblue;
-}
-.header-right{
-    float: right;
-    width: 200px;
-    text-align: center;
-    color: white;
+    clear: both;
+
 }
 
-.container-wrapper{
-    width: 100%;
-}
 .side-bar {
     width: 300px;
+    height: auto;
     overflow-y: auto;
     overflow-x: hidden;
     font-size: 14px;
-    position: absolute;
+    position: fixed;
+    top: 100px;
     left: 0;
+    bottom: 0;
 }
 .continer {
-    padding-left: 320px;
+    position: fixed;
+    left : 320px;
+    right : 0;
+    top : 100px;
+    bottom : 0;
 }
 
 </style>

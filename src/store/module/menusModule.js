@@ -8,14 +8,14 @@ let menus = [
         isSelected: false,
         subMenu: [
             {
-                id: 21,
+                id: 8,
                 level: 2,
                 name: '评价活动',
                 type: "link",
                 url: "/detail/evaluateActive"
             },
             {
-                id: 21,
+                id: 9,
                 level: 2,
                 name: '活动对比',
                 type: "link",
@@ -38,7 +38,7 @@ let menus = [
         url: "/detail/questionnaire"
     },
     {
-        id: 5,
+        id: 4,
         level: 1,
         name: '评价题库管理',
         type: "button",
@@ -46,31 +46,31 @@ let menus = [
         isSelected: false,
         subMenu: [
             {
-                id: 21,
+                id: 10,
                 level: 2,
                 name: '一级属性管理',
                 type: "link",
                 url: "/detail/firstImportance"
             }, {
-                id: 22,
+                id: 11,
                 level: 2,
                 name: '二级属性管理',
                 type: "link",
                 url: "/detail/secondImportance"
             }, {
-                id: 23,
+                id: 12,
                 level: 2,
                 name: '三级属性管理',
                 type: "link",
                 url: "/detail/thirdImportance"
             }, {
-                id: 24,
+                id: 13,
                 level: 2,
                 name: '四级属性管理',
                 type: "link",
                 url: "/detail/fouthImportance"
             }, {
-                id: 25,
+                id: 14,
                 level: 2,
                 name: '重要度管理',
                 type: "link",
@@ -79,21 +79,21 @@ let menus = [
         ]
     }, 
     {
-        id: 6,
+        id: 5,
         level: 1,
         name: '评价类型管理',
         type: "link",
         url: "/detail/evaluationType"
     },
     {
-        id: 8,
+        id: 6,
         level: 1,
         name: '评价人员管理',
         type: "link",
         url: "/detail/evaluator"
     },
     {
-        id: 9,
+        id: 7,
         level: 1,
         name: '权限管理',
         type: "button",
@@ -101,14 +101,14 @@ let menus = [
         isSelected: false,
         subMenu: [
             {
-                id: 31,
+                id: 15,
                 level: 2,
                 name: '管理员设置',
                 type: "link",
                 url: "/detail/administrators"
             }, 
             {
-                id: 32,
+                id: 16,
                 level: 2,
                 name: '人员管理',
                 type: "link",

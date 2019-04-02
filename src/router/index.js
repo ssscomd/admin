@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import App from '@/App';
-import TreeViewDetail from '@/TreeViewDetail';
 import ActiveContrast from "@/pages/active/activeContrast";
 import EvaluateActive from "@/pages/active/evaluateActive";
 import Object from "@/pages/object/evaluateObject";
