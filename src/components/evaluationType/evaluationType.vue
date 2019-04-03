@@ -13,15 +13,16 @@
                     </select>
                 </div>
             </div>
-            <p></p>
-            <div>
-                <button></button>
-                <button></button>
+            <p class="line"></p>
+            <div class="btn">
+                <button >搜索</button>
+                <button >重置</button>
             </div>
         </div>
     </div>
 </template>
 <script>
+
 export default {
     data(){
         return{
@@ -35,21 +36,52 @@ export default {
     width:1168px;
     height:121px;
     background:#fff;
+    border-radius: 5px;
     .typeHeader{
         box-sizing: border-box;
         padding-left:20px;
+        overflow: hidden;
+        
         .typeHeaderTop{ 
+            height:70px;
+            margin-bottom:10px;
             p{
                 line-height:30px;
             }           
             .typeHeaderTop_l{
                 float:left;
                 margin-right: 100px;
+                input{
+                    width:148px;
+                    height:28px;
+                }
             }
             .typeHeaderTop_r{
                 float:left;
+                select{
+                    width:204px;
+                    height:27px;
+                }
             }
         }
+        .line{
+            width:1121px;
+            height:1px;
+            background:#ccc;
+        }
+        .btn{
+            
+            button{
+                
+                margin-top:6px;
+                margin-right:20px;
+                width:61px;
+                height:28px;
+                border-radius: 5px;
+                border:1px solid #ccc;
+            }
+        }
+        
     }
 }
 </style>

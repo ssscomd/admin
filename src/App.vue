@@ -26,11 +26,13 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+
 }
 html,body,#app,.home {
   height: 100%;
 }
-html,body {
-  overflow: hidden;
+body,html {
+   overflow: hidden;
+
 }
 </style>
