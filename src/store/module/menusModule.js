@@ -3,6 +3,7 @@ let menus = [
         id: 1,
         level: 1,
         name: '评价活动管理',
+        img : "./components/common/images/活动.png" ,
         type: "button",
         isExpanded: false,
         isSelected: false,

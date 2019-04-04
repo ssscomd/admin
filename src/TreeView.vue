@@ -21,8 +21,9 @@
     .tree-view-menu {
         width: 300px;
         height: 100%;
-        overflow-y: auto;
+        overflow-y: hidden;
         overflow-x: hidden;
+        color: #fff;
     }
     .tree-view-menu::-webkit-scrollbar {
         height: 6px;
