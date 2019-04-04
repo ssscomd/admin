@@ -72,13 +72,14 @@ export default {
         .btn{
             
             button{
-                
+                background-color:#263f73;
                 margin-top:6px;
                 margin-right:20px;
                 width:61px;
                 height:28px;
                 border-radius: 5px;
                 border:1px solid #ccc;
+                color:#fefefe;
             }
         }
         

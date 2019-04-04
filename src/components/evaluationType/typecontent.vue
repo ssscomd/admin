@@ -4,20 +4,26 @@
             <button>+ 新建评价类型</button>
         </div>
         <div class="typecontenttitle">            
-                <span v-for="(item,index) of typecontentlist" :key="index">{{item}}</span>          
+                <span v-for="(item,index) of typecontenttitle" :key="index">{{item}}</span>          
         </div>
+        <ul>
+            <li>
+                <span></span>
+            </li>
+        </ul>
     </div>
 </template>
 <script>
 export default {
     data(){
         return{
-            typecontentlist:[
+            typecontenttitle:[
                 '评价类型名称',
                 '评价类型图片',
                 '状态',
                 '创建时间',
-                '操作']
+                '操作'],
+            typecontentlist:[1]   
         }
     }
 }
@@ -35,12 +41,12 @@ export default {
             button{
                 width:131px;
                 height:28px;
-                background:rgba(16, 142, 233, 1);
+                background:#263f73;
                 border:1px solid #fff;
                 border-radius: 5px;
                 float:left;
                 margin-top:10px;
-                color:#fff;
+                color:#fefefe;
             }
         }
         .typecontenttitle{
@@ -48,7 +54,7 @@ export default {
             width:1120px;
             height:56px;
             line-height:56px;
-            background:rgba(243, 243, 243, 1);
+            background:#e5e5e5;
             font-size:14px;
             span{
                 display:inline-block;

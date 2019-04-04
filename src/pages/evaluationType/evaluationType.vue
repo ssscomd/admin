@@ -1,8 +1,10 @@
 <template>
     <div class="container">
-        <h3>
-            这里是评价类型管理
-        </h3>
+        <div>
+            <h3>
+                这里是评价类型管理
+            </h3>
+        </div>
         <evaluationType></evaluationType>
         <typecontent></typecontent>
     </div>
@@ -41,11 +43,16 @@ import Typecontent from '@/components/evaluationType/typecontent' ;
         padding-right:20px;
         overflow-x: scroll;
         overflow-y: scroll;
-        h3 {
+        div{
+            overflow: hidden;
+             h3 {           
+            float:left;
             height:70px;
             line-height:70px;
             font-weight: normal;
         }
+        }
+       
     }
     
 </style>
