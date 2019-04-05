@@ -6,6 +6,7 @@
             v-for="menu in menus"
             :key="menu.id">
             <div v-if="menu.type === 'link'">
+                
                 <router-link class="link" v-bind:to="menu.url" @click.native="toggle(menu)">{{menu.name}}</router-link>
             </div>
             <div v-if="menu.type === 'button'">
@@ -22,7 +23,7 @@
                 </div>
                 <transition name="fade">
                     <div class="heading-children" v-show="menu.isExpanded" v-if="menu.subMenu">
-                        <Tree-view-item :menus='menu.subMenu'></Tree-view-item>
+                        <Tree-view-item :menus='menu.subMenu'>图2</Tree-view-item>
                     </div>
                 </transition>
             </div>
@@ -51,11 +52,12 @@
 <style scoped="scoped">
     a {
         text-decoration: none;
-        color: #333;
+        color: #fff;
     }
     .button,
     .link {
         display: block;
+        box-sizing: border-box;
         padding: 10px 15px;
         transition: background-color 0.2s ease-in-out 0s, color 0.3s ease-in-out 0.1s;
         -moz-user-select: none;
@@ -63,6 +65,10 @@
         -ms-user-select: none;
         -khtml-user-select: none;
         user-select: none;
+        height: 60px;
+        line-height: 44px;
+        font-size: 16px;
+        font-weight: normal;
     }
     .button {
         position: relative;
@@ -75,7 +81,8 @@
     }
     .icon {
         position: absolute;
-        right: 0;
+        right: 32px;
+        top: 18px;
         display: inline-block;
         height: 24px;
         width: 24px;

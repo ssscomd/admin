@@ -1,19 +1,14 @@
 <template>
-
-        
-        <div class="tree-view-menu">
-            <Tree-view-item :menus='menus'></Tree-view-item>
-        </div>
-
+    <div class="tree-view-menu">
+        <Tree-view-item :menus='menus'></Tree-view-item>
+    </div>
 </template>
 <script>
     import TreeViewItem from "./TreeViewItem";
-    import Header from "@/components/common/header";
     const menusData = [];
     export default {
         components: {
             TreeViewItem,
-            Header
         },
         name: "TreeViewMenu",
         data() {
@@ -26,8 +21,9 @@
     .tree-view-menu {
         width: 300px;
         height: 100%;
-        overflow-y: auto;
+        overflow-y: hidden;
         overflow-x: hidden;
+        color: #fff;
     }
     .tree-view-menu::-webkit-scrollbar {
         height: 6px;
