@@ -6,7 +6,7 @@
         <div class="side-bar">
             <Tree-view></Tree-view>
         </div>
-        <div class="continer">           
+        <div class="container">
             <router-view></router-view>
         </div>
         
@@ -29,8 +29,8 @@ export default {
     top: 0;
     left: 0;
     right: 0;
-    height : 80px;
-    line-height: 80px;
+    height : 60px;
+    line-height: 60px;
     background: #162d5f;
     color : #fff;
     font-family: "PingFang-SC-Medium";
@@ -40,30 +40,30 @@ export default {
     display: block;
     height: 0;
     clear: both;
-
-    }
+}
 
 .side-bar {
-    width: 300px;
+    width: 230px;
     height: auto;
     overflow-y: hidden;
     overflow-x: hidden;
     font-size: 14px;
     position: fixed;
-    top: 80px;
+    top: 60px;
     left: 0;
     bottom: 0;
     background: #0e1c3b;
     text-align: center;
     color: #fff;
 }
-.continer {
+.container {
     position: fixed;
-    left : 300px;
+    left : 230px;
     right : 0;
-    top : 100px;
+    top : 60px;
     bottom : 0;
-    overflow-y: scroll;
+    box-sizing: border-box;
+    background: rgba(235, 241, 246, 1);
 }
 
 </style>

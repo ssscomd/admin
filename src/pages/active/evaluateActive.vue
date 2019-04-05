@@ -1,8 +1,9 @@
 <template>
     <div id='root'>
   <div id='header'>
-      <ActivHea></ActivHea>
+      <h3>评价活动管理 》 评价活动</h3>
     </div>
+     <ActivHea></ActivHea>
    </div>
 </template>
 <script>
@@ -22,13 +23,24 @@ import ActivHea from "@/components/active/header.vue";
             }
         },
         components:{
-            
+            ActivHea
         }
     };
 </script>
-<style scoped="scoped">
-    h3 {
-        margin-top: 10px;
-        font-weight: normal;
+<style lang="less" scoped>
+ #header{
+       
+        height:40px;
+        /* background:red; */
+        border-bottom:1px solid black;
+        h3{
+              font-size:27px;
+              margin-left:60px;
+              line-height: 40px;
+              color:gray
+        }
+
+
     }
+    
 </style>
