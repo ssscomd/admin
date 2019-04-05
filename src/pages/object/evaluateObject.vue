@@ -1,12 +1,12 @@
 <template>
-    <h3>
+    <div class="obj">
         <ObjHeader></ObjHeader>
-        <!-- <Content></Content> -->
-        
-    </h3>
+        <ObjContent></ObjContent>
+    </div>
 </template>
 <script>
     import ObjHeader from "@/components/object/objHeader";
+    import ObjContent from "@/components/object/objContent";
     export default {
         name: "evaluateObject",
         data() {
@@ -16,6 +16,7 @@
         },
         components: {
             ObjHeader,
+            ObjContent
         },
         watch: {
             //监听路由，只要路由有变化(路径，参数等变化)都有执行下面的函数
@@ -28,9 +29,9 @@
         }
     };
 </script>
-<style scoped="scoped">
-    h3 {
-        margin-top: 10px;
-        font-weight: normal;
+<style lang="less" scoped="scoped">
+    .obj{
+        padding: 30px 0 0 30px;
+
     }
 </style>

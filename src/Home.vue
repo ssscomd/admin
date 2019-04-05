@@ -6,7 +6,7 @@
         <div class="side-bar">
             <Tree-view></Tree-view>
         </div>
-        <div class="continer">
+        <div class="container">
             <router-view></router-view>
         </div>
     </div>
@@ -57,13 +57,14 @@ export default {
     text-align: center;
     color: #fff;
 }
-.continer {
+.container {
     position: fixed;
     left : 300px;
     right : 0;
-    top : 100px;
+    top : 80px;
     bottom : 0;
-    color: #fff;
+    box-sizing: border-box;
+    background: rgba(235, 241, 246, 1);
 }
 
 </style>
