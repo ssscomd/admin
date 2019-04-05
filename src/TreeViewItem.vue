@@ -58,7 +58,7 @@
     .link {
         display: block;
         box-sizing: border-box;
-        padding: 10px 15px;
+        padding: 10px 0 10px;
         transition: background-color 0.2s ease-in-out 0s, color 0.3s ease-in-out 0.1s;
         -moz-user-select: none;
         -webkit-user-select: none;
@@ -67,7 +67,7 @@
         user-select: none;
         height: 60px;
         line-height: 44px;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: normal;
     }
     .button {
@@ -81,7 +81,7 @@
     }
     .icon {
         position: absolute;
-        right: 32px;
+        right: 15px;
         top: 18px;
         display: inline-block;
         height: 24px;

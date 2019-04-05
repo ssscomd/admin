@@ -19,7 +19,6 @@
 <style scoped="scoped">
 
     .tree-view-menu {
-        width: 300px;
         height: 100%;
         overflow-y: hidden;
         overflow-x: hidden;

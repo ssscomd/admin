@@ -31,7 +31,7 @@
 </script>
 <style lang="less" scoped="scoped">
     .obj{
-        padding: 30px 0 0 30px;
+        padding: 20px 0 0 20px;
 
     }
 </style>

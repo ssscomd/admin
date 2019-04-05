@@ -41,10 +41,10 @@ export default {
 <style lang="less" scope="scope">
     .header-container{
         h4{
-            font-size: 20px;
+            font-size: 18px;
         };
         .header-content{
-            width: 980px;
+            width: 1080px;
             height: 120px;
             background: #fff;
             padding: 10px 0 10px 30px;
@@ -86,7 +86,7 @@ export default {
             content: "";
             display: block;
             height: 1px;
-            width: 930px;
+            width: 1030px;
             background: #333;
             position: absolute;
             bottom: -8px;
