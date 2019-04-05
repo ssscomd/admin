@@ -1,9 +1,12 @@
 <template>
-    <h3>
-        这里是盘评价活动管理
-    </h3>
+    <div id='root'>
+  <div id='header'>
+      <ActivHea></ActivHea>
+    </div>
+   </div>
 </template>
 <script>
+import ActivHea from "@/components/active/header.vue";
     export default {
         name: "evaluateActive",
         data() {
@@ -17,6 +20,9 @@
                 },
                 deep: true
             }
+        },
+        components:{
+            
         }
     };
 </script>

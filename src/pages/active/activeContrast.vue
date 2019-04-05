@@ -10,6 +10,7 @@
 
 <script>
 import ActivHea from "@/components/active/header.vue";
+
     export default {
         name: "activeContrast",
         data() {
@@ -29,11 +30,13 @@ import ActivHea from "@/components/active/header.vue";
         }
     };
 </script>
-<style scoped>
+<style lang='less' scoped>
     #header{
-        width:60pxpx;
+       
         height:60px;
-        background:red;
+        /* background:red; */
+        border-bottom:1px solid black;
+
 
     }
 </style>
