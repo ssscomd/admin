@@ -5,11 +5,11 @@
             <button type="button" class="ivu-btn ivu-btn-primary"><span>导出</span></button>
         </div>
         <ul class="type">
-            <span>评价对象名称</span>
-            <span>评价对象图片</span>
-            <span>所属评价类型</span>
-            <span>创建时间</span>
-            <span>操作</span>
+            <li>评价对象名称</li>
+            <li>评价对象图片</li>
+            <li>所属评价类型</li>
+            <li>创建时间</li>
+            <li>操作</li>
         </ul>
         <ul>
             <li>
@@ -55,11 +55,21 @@ export default {
             width: 930px;
             height: 80px;
             background: #e5e5e5;
+            box-sizing: border-box;
             li{
-                flex: 1;
+                width: 126px;
+                display :inline-block;
                 text-align: center;
                 float: left;
+                line-height: 80px;
             }
+        }
+        .type:after{
+            content: "";
+            display: block;
+            clear: both;
+            height: 0;
+            overflow: hidden;
         }
     }
 </style>
