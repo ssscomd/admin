@@ -97,7 +97,8 @@ export default {
 </script>
 <style lang="less" scoped>
         .typecontentWrapper{
-            width:1120px;
+            box-sizing: border-box;
+            width:1168px;
             height:620px;       
             margin-top:10px;
             background:#fff;
@@ -122,6 +123,7 @@ export default {
                 line-height:56px;
                 background:#e5e5e5;
                 font-size:14px;
+                text-align:center;
                 span{
                     display:inline-block;
                     width:224px;
@@ -132,6 +134,7 @@ export default {
                 margin-bottom:12px;
                 width:1120px;
                 height:448px;
+                text-align:center;
                 li{
                     list-style:none;
                     width:1120px;
@@ -151,8 +154,7 @@ export default {
                         }
                     }
                 }
-            }
-            
+            }           
             
         }
     

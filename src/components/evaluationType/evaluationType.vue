@@ -40,8 +40,7 @@ export default {
     .typeHeader{
         box-sizing: border-box;
         padding-left:20px;
-        overflow: hidden;
-        
+        overflow: hidden;        
         .typeHeaderTop{ 
             height:70px;
             margin-bottom:10px;

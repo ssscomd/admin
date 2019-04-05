@@ -15,7 +15,9 @@ export default {
 }
 </script>
 <style lang="less" scoped="scoped">
-    .compileWrapper{        
+    .compileWrapper{                  
+        width:1216px;
+        height:762px;
         position: fixed;
         box-sizing: border-box;
         left : 320px;
@@ -24,14 +26,13 @@ export default {
         bottom : 0;
         background:#dfdfdf;    
         padding-left:20px;
-        padding-right:20px;
+        padding-right:20px;  
+        overflow-y: scroll;         
         .compileWrapper_title{
             width:100%;
             height:70px;
             line-height:70px;            
-            overflow:hidden;
-            h3{
-                float:left;               
+            h3{              
                 font-size:20px;
                 color:#343434;            
                 font-weight:normal;

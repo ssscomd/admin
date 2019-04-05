@@ -63,7 +63,7 @@ export default {
     right : 0;
     top : 100px;
     bottom : 0;
-
+    overflow-y: scroll;
 }
 
 </style>

@@ -14,7 +14,7 @@
 import EvaluationType from '@/components/evaluationType/evaluationType';
 import Typecontent from '@/components/evaluationType/typecontent' ;
 import Compile from '@/components/evaluationType/utils/compile';
-    export default {
+    export default {       
         name: "evaluateObject",
         data() {
             console.log(this.$route.path)
@@ -39,16 +39,13 @@ import Compile from '@/components/evaluationType/utils/compile';
     .container{
         box-sizing: border-box;
         width:100%;
-        height:100%;
+        height:762px;
         background:#dfdfdf;
         padding-left:20px;
         padding-right:20px;
-        overflow-x: scroll;
-        overflow-y: scroll;
+
         div{
-            overflow: hidden;
              h3 {           
-            float:left;
             height:70px;
             line-height:70px;
             font-weight: normal;
