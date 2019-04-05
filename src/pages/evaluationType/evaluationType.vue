@@ -7,11 +7,13 @@
         </div>
         <evaluationType></evaluationType>
         <typecontent></typecontent>
+       <router-view></router-view>
     </div>
 </template>
 <script>
 import EvaluationType from '@/components/evaluationType/evaluationType';
 import Typecontent from '@/components/evaluationType/typecontent' ;
+import Compile from '@/components/evaluationType/utils/compile';
     export default {
         name: "evaluateObject",
         data() {
@@ -38,7 +40,7 @@ import Typecontent from '@/components/evaluationType/typecontent' ;
         box-sizing: border-box;
         width:100%;
         height:100%;
-        background:rgba(235, 241, 246, 1);
+        background:#dfdfdf;
         padding-left:20px;
         padding-right:20px;
         overflow-x: scroll;

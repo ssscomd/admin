@@ -6,7 +6,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './store/index'
-import 'iview/dist/styles/iview.css';
+import 'iview/dist/styles/iview.css';//引入
 Vue.config.productionTip = false
 /* eslint-disable no-new */
 new Vue({

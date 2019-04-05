@@ -1,4 +1,5 @@
-<template>
+
+ <template>
 <div>
  <div id="activeHeader">
     <h6>评价活动类型名称</h6>
@@ -20,7 +21,7 @@
             <img src="./img/u299.png" alt="">
             <img src="./img/u299.png" alt="">
         </div>
-        <div>
+        <div id='inputL'>
             <img src="./img/u299.png" alt="">
             <img src="./img/u299.png" alt="">
             <img src="./img/u299.png" alt="">
@@ -28,13 +29,16 @@
 
     </div>
     <div id='Fenye'>
-      
+      <Page :total="100" />
     </div>
 </div>
    
 </template>
 
 <script>
+ import Vue from 'vue'
+ import { Page } from 'iview';
+ Vue.component('Page',Page);
 export default {
     
 }
@@ -43,31 +47,37 @@ export default {
 <style lang='less' scoped>
 #activeHeader{
 h6{
-    margin-left:-670px;
+    margin-left:-700px;
     /* display:inline-block; */
     font-size:17px
 }
 #input{
-   
+    outline:none;
     border:1px solid black;
     width:192px;
     height:30px;
-    margin-left:-670px
+    margin-left:-700px
   
 }
 }
 
 #activeNex{
     margin-left:-700px;
-    height:80px;
+    height:50px;
+    font-size:15px;
+    
+    
     
     button {
     border:none;
-    width:60px;
-    height:35px;
+    width:77px;
+    height:28px;
     border:1px solid transparent;
     outline:none;
-    margin:20px
+    margin:10px;
+    background:#0d1f42;
+    color:#fefefe;
+   
     
 
 
@@ -84,6 +94,14 @@ h6{
             margin:30px 60px
         }
     }
+    #inputL{
+        border-bottom:none
+    }
+}
+#Fenye{
+    position:absolute;
+    bottom:10px;
+    right:100px
 }
 
 

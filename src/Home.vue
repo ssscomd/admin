@@ -6,9 +6,10 @@
         <div class="side-bar">
             <Tree-view></Tree-view>
         </div>
-        <div class="continer">
+        <div class="continer">           
             <router-view></router-view>
         </div>
+        
     </div>
 </template>
 <script>

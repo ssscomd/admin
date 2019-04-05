@@ -10,6 +10,7 @@
 
 <script>
 import ActivHea from "@/components/active/header.vue";
+
     export default {
         name: "activeContrast",
         data() {
