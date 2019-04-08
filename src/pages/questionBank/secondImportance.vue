@@ -1,10 +1,17 @@
 <template>
-    <h3>
-        这里是评价{{currentRoute}}管理
-    </h3>
+    <div>
+        <Header></Header>
+        <Content></Content>
+    </div>
 </template>
 <script>
+import Header from "@/components/second/header";
+import Content from "@/components/second/content";
     export default {
+        components:{
+            Header,
+            Content
+        },
         name: "evaluateObject",
         data() {
             return {currentRoute: this.$route.path};
