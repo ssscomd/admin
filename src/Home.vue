@@ -64,6 +64,7 @@ export default {
     bottom : 0;
     box-sizing: border-box;
     background: rgba(235, 241, 246, 1);
+    overflow: auto;
 }
 
 </style>

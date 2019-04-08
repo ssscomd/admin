@@ -51,7 +51,23 @@
                     <span>删除</span>
                 </div>
             </li>
+            <li>
+                <div>福田汽车</div>
+                <div>
+                    <img src="./images/图层5.png" alt="">
+                </div>
+                <div>汽车</div>
+                <div>2018-01-01</div>
+                <div>
+                    <span>编辑</span>
+                    <span>参考</span>
+                    <span>删除</span>
+                </div>
+            </li>
         </ul>
+        <div class="page">
+            <Page :total="100" />
+        </div>
     </div>
 </template>
 
@@ -64,7 +80,7 @@ export default {
 <style lang="less" scope>
     .content-container{
         width: 1080px;
-        height: 300px;
+        height: auto;
         background: #fff;
         margin-top: 30px;
         padding: 0 0 0 30px;
@@ -86,7 +102,7 @@ export default {
             background: #e5e5e5;
             box-sizing: border-box;
             li{
-                width: 216px;
+                width: 206px;
                 display :block;
                 text-align: center;
                 float: left;
@@ -109,7 +125,7 @@ export default {
                 height: 80px;
                 border-bottom: 1px solid #999;
                 div{
-                    width: 216px;
+                    width: 206px;
                     display :block;
                     text-align: center;
                     float: left;
@@ -128,6 +144,10 @@ export default {
                 height: 0;
                 overflow: hidden;
             }
+        }
+        .page{
+            padding: 20px 0 ;
+            text-align: center;
         }
     }
 </style>
