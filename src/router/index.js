@@ -14,7 +14,7 @@ import EvaluationType from "@/pages/evaluationType/evaluationType";
 import Evaluator from "@/pages/evaluator/evaluator";
 import Administrators from "@/pages/privilegeManagement/administrators";
 import Role from "@/pages/privilegeManagement/role";
-
+import Third from '@/components/active/third';
 
 
 
@@ -32,12 +32,20 @@ export default new Router({
   {
   path: '/detail/evaluateActive',
   name: 'evaluateActive',
-  component: EvaluateActive
+  component: EvaluateActive,
+  
   },
   {
   path: '/detail/activeContrast',
   name: 'activeContrast',
-  component: ActiveContrast
+  component: ActiveContrast,
+    children:[
+      {
+        path:'third',
+        component:Third
+
+      }
+    ]
   },
   // 评价对象
   {
