@@ -12,6 +12,8 @@ import FouthImportance from "@/pages/questionBank/fouthImportance";
 import Importance from "@/pages/questionBank/importance";
 import EvaluationType from "@/pages/evaluationType/evaluationType";
 import Evaluator from "@/pages/evaluator/evaluator";
+import Evaluator1 from "@/components/evaluator/evaluator1";
+import Evaluator2 from "@/components/evaluator/evaluator2";
 import Administrators from "@/pages/privilegeManagement/administrators";
 import Role from "@/pages/privilegeManagement/role";
 
@@ -88,7 +90,17 @@ export default new Router({
   {
   path: '/detail/evaluator',
   name: 'evaluator',
-  component: Evaluator
+  component: Evaluator,
+  children:[{
+    path: 'evaluator1',
+    component: Evaluator1,
+    },
+    {
+      path: 'evaluator2',
+      component: Evaluator2,
+    }
+  ]
+
   },
 // 权限管理
   {
