@@ -12,52 +12,15 @@
             <li>操作</li>
         </ul>
         <ul class="content">
-            <li>
-                <div>福田汽车</div>
+            <li 
+            v-for="(item,index) in showList" 
+            :key="index">
+                <div>{{item.car_name}}</div>
                 <div>
-                    <img src="./images/图层5.png" alt="">
+                    <img :src="item.car_img" alt="">
                 </div>
-                <div>汽车</div>
-                <div>2018-01-01</div>
-                <div>
-                    <span>编辑</span>
-                    <span>参考</span>
-                    <span>删除</span>
-                </div>
-            </li>
-           <li>
-                <div>福田汽车</div>
-                <div>
-                    <img src="./images/图层5.png" alt="">
-                </div>
-                <div>汽车</div>
-                <div>2018-01-01</div>
-                <div>
-                    <span>编辑</span>
-                    <span>参考</span>
-                    <span>删除</span>
-                </div>
-            </li>
-            <li>
-                <div>福田汽车</div>
-                <div>
-                    <img src="./images/图层5.png" alt="">
-                </div>
-                <div>汽车</div>
-                <div>2018-01-01</div>
-                <div>
-                    <span>编辑</span>
-                    <span>参考</span>
-                    <span>删除</span>
-                </div>
-            </li>
-            <li>
-                <div>福田汽车</div>
-                <div>
-                    <img src="./images/图层5.png" alt="">
-                </div>
-                <div>汽车</div>
-                <div>2018-01-01</div>
+                <div>{{item.tname}}</div>
+                <div>{{item.craete_time_o}}</div>
                 <div>
                     <span>编辑</span>
                     <span>参考</span>
@@ -66,14 +29,59 @@
             </li>
         </ul>
         <div class="page">
-            <Page :total="100" />
+            <Page :total="page.total" :page-size="page.pageSize" ref="page" @on-change="changePage"/>
         </div>
     </div>
 </template>
 
 <script>
+import api from "./api";
 export default {
-    
+    data() {
+        return {
+            list : [],
+            showList : [],
+            page : {
+                pageSize : 5 ,
+                total : 0,
+            }
+        }
+    },
+    created() {
+        api.requestGet("/evaluates/objects_manage/")
+        .then(data => {
+            // console.log(data.data);
+            const baseUrl = "http://www.yudonghe.top:80";
+            const _data = data.data.data ;
+            this.page.total = _data.length ;
+
+            for (let i = 0; i < _data.length; i++) {
+                this.list.push(_data[i].object) ;
+                this.list[i].car_img = baseUrl + _data[i].object.car_img;
+                this.list[i].craete_time_o = _data[i].craete_time_o ;
+                this.list[i].tname = _data[i].type.tname ;
+            }
+
+            // 显示数量
+            if(this.list.length < this.page.pageSize){
+                this.showList = this.list ;
+            }else{
+                this.showList = this.list.slice(0,this.page.pageSize);
+            }
+        })
+        console.log(this.list);
+        
+    },
+    methods: {
+        // 改变this.showList的数据
+        changePage() {
+            const currentPage = this.$refs.page.currentPage;
+            // console.log(currentPage,this.$refs.page);
+            const _start = (currentPage - 1) * this.page.pageSize ;
+            const _end = currentPage * this.page.pageSize ; 
+            this.showList = this.list.slice(_start,_end) ;
+        }
+    },
 }
 </script>
 
