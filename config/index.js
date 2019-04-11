@@ -4,13 +4,20 @@
 
 const path = require('path')
 
+
 module.exports = {
   dev: {
 
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+    "/yudonghe" : { //暗号
+      target : "http://www.yudonghe.top:80", // 要转发的目标路径
+      changeOrigin : "true", // 改变请求源
+      pathRewrite : {"^/yudonghe" : ""} // 路径重写
+      },
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
