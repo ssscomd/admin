@@ -9,6 +9,7 @@
         <div class="container">
             <router-view></router-view>
         </div>
+        
     </div>
 </template>
 <script>
@@ -23,7 +24,6 @@ export default {
 };
 </script>
 <style lang="less" scoped>
-@import url("./common/style/index.less");
 .header-container{
     position : fixed ;
     top: 0;
@@ -40,8 +40,7 @@ export default {
     display: block;
     height: 0;
     clear: both;
-}
-
+    }
 .side-bar {
     width: 230px;
     height: auto;

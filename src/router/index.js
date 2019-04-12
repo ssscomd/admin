@@ -14,10 +14,10 @@ import EvaluationType from "@/pages/evaluationType/evaluationType";
 import Evaluator from "@/pages/evaluator/evaluator";
 import Administrators from "@/pages/privilegeManagement/administrators";
 import Role from "@/pages/privilegeManagement/role";
+
 import Third from '@/components/active/third';
-
-
-
+import Newtype from '@/components/evaluationType/utils/newType.vue';
+import Compile from '@/components/evaluationType/utils/compile';
 
 Vue.use(Router)
 
@@ -89,7 +89,17 @@ export default new Router({
   {
   path: '/detail/evaluationType',
   name: 'evaluationType',
-  component: EvaluationType
+  component: EvaluationType,
+  children:[
+    {
+      path:'newType',
+      component:Newtype,
+    },
+    {
+      path:'compile',
+      component:Compile,
+    }
+  ]
   },
 
 // 评价人员管理：

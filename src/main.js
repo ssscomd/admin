@@ -12,12 +12,12 @@ import 'iview/dist/styles/iview.css';//引入样式
 // Vue.use(iView);
 
 Vue.config.productionTip = false
-
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
   store,
+  
   components: { App },
   template: '<App/>'
 })
