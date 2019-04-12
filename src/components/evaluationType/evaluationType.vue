@@ -33,7 +33,7 @@ export default {
 </script>
 <style lang="less">
 .typeHeaderWraper{
-    width:1168px;
+    width:100%;
     height:121px;
     background:#fff;
     border-radius: 5px;

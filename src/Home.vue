@@ -40,7 +40,12 @@ export default {
     display: block;
     height: 0;
     clear: both;
+<<<<<<< HEAD
     }
+=======
+}
+
+>>>>>>> 106e8145ea73221e8a0394bbc96f55af70c98259
 .side-bar {
     width: 230px;
     height: auto;
@@ -63,7 +68,11 @@ export default {
     bottom : 0;
     box-sizing: border-box;
     background: rgba(235, 241, 246, 1);
+<<<<<<< HEAD
     overflow: auto;
+=======
+    overflow-y: scroll;
+>>>>>>> 106e8145ea73221e8a0394bbc96f55af70c98259
 }
 
 </style>

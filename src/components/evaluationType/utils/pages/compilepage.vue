@@ -30,10 +30,14 @@
                         <p class="left">{{item.name}}</p>
                         <p class="right">
                             <span>{{item.com}}</span>
-                            <span class="red">{{item.del}}</span>
+                            <span class="red" @click="delcompile($event)">{{item.del}}</span>
                         </p>
                     </li>
                 </ul>
+                <div class="btn">
+                    <button>返回</button>
+                    <button class="blue">保存</button>
+                </div>                
             </div>
         </div>
     </div>
@@ -85,28 +89,31 @@ export default {
                 }
             ]
         }
+    },
+    methods:{
+        delcompile(e){
+            this.paramslist.splice(e.target,1);
+        }
     }
 }
 </script>
 <style lang="less" scoped>
     .compilecontentwrapper{
-        width:1168px;
+        width:100%;
         height:762px;
         border-radius: 5px;
         background:#fff;
         .compilecontentwrappertitle{
-            width:1168px;
+            width:100%;
             height:42px;
             line-height:42px;
-            overflow:hidden;
             font-size:14px;
             border-bottom:1px solid #e5e5e5;
             margin-bottom:20px;
             h4{
-                float: left;
                 margin-left:20px;
                 font-weight: normal;
-                color:#333;               
+                color:#263f73;               
             }
         }
         .typeinfodetail{
@@ -188,21 +195,49 @@ export default {
                         width:200px;
                         text-align:center;
                     }
-                    
+                   
                 }
                 ul{
                     li{
                         width:100%;
                         height:44px;
                         list-style:none;
+                        border-bottom:1px solid #e5e5e5;
+                        font-size:14px;
                         p{
                             display:inline-block;
                             width:200px;
                             text-align:center;
+                            line-height: 44px;                           
                             span{
-
+                                color:#7c9fd9;
+                                margin-left:20px;                              
+                            }
+                            .red{
+                                  color:#ff7777;
+                                  cursor: pointer;  
                             }
                         }
+                    }
+                }
+                .btn{
+                   width:400px;
+                   margin:0 auto;
+                    button{ 
+                        margin:0 auto;                     
+                        width:80px;
+                        height:30px;
+                        font-size:14px;
+                        color:#b1b1b1;
+                        border:1px solid #e5e5e5;
+                        border-radius:5px;
+                        background:#fff;
+                        margin-top:40px;
+                        margin-right:80px;
+                    }
+                    .blue{
+                        background:#263f73;
+                        color:#fff;
                     }
                 }
             }

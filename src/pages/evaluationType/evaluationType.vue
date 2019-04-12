@@ -2,7 +2,7 @@
     <div class="container">
         <div>
             <h3>
-                这里是评价类型管理
+                评价类型管理
             </h3>
         </div>
         <evaluationType></evaluationType>
@@ -49,6 +49,7 @@ import Compile from '@/components/evaluationType/utils/compile';
             height:70px;
             line-height:70px;
             font-weight: normal;
+            font-size:20px;
         }
         }
        
