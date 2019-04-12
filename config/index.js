@@ -10,7 +10,13 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      '/yudonghe':{
+        target:'http://www.yudonghe.top:80',
+        changeOrigin:true,
+        pathRewrite:{'^/yudonghe':''}
+      }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST

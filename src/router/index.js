@@ -16,6 +16,8 @@ import Administrators from "@/pages/privilegeManagement/administrators";
 import Role from "@/pages/privilegeManagement/role";
 import Newtype from '@/components/evaluationType/utils/newType.vue';
 import Compile from '@/components/evaluationType/utils/compile';
+import SetUp from '@/pages/question/pages2/newQuestionnaire';
+
 Vue.use(Router)
 
 export default new Router({
@@ -47,7 +49,18 @@ export default new Router({
   path: '/detail/questionnaire',
   name: 'questionnaire',
   component: Questionnaire ,
+  /* children:[
+    {
+      path:'setUp',
+      component:SetUp,
+    },
+  ] */
   },
+  {
+    path: '/detail/questionnaire/setUp',
+    name: 'setUp',
+    component: SetUp ,
+    },
   // 评价题库
   {
   path: '/detail/firstImportance',

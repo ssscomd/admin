@@ -14,19 +14,17 @@
                     </div>
                     <div>{{item.state}}</div>
                     <div>{{item.time}}</div>
-                    <div>
+                    <div class="opeation">
                         <span>{{item.check}}</span>
                         <span @click='goCompile()'>{{item.compile}}</span>
-                        <span>{{item.disabled}}</span>
-                        <span>{{item.delete}}</span>
+                        <span class="yellow">{{item.disabled}}</span>
+                        <span class="red" @click="delinfo($event)">{{item.delete}}</span>
                     </div>
                 </li>
             </ul>
             <div class="pages">
                 <Page :total="100"></Page>
-            </div>            
-            
-            
+            </div>                       
         </div>            
 </template>
 <script>
@@ -91,6 +89,10 @@ export default {
         },
         goCompile(){
             this.$router.push('/detail/evaluationType/compile')
+        },
+        delinfo(e){
+            console.log(e.target)
+            this.typecontentlist.splice(e.target,1)
         }
     }
 }
@@ -98,7 +100,7 @@ export default {
 <style lang="less" scoped>
         .typecontentWrapper{
             box-sizing: border-box;
-            width:1168px;
+            width:100%;
             height:620px;       
             margin-top:10px;
             background:#fff;
@@ -151,6 +153,16 @@ export default {
                         img{                       
                             width:153px;
                             height:82px;
+                        }
+                    }
+                    .opeation{
+                        cursor: pointer;
+                        color:#5e8bd2;
+                        .yellow{
+                            color:#ffb503;
+                        }
+                        .red{
+                            color:#ff2d2d;
                         }
                     }
                 }

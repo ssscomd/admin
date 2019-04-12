@@ -7,13 +7,18 @@ import App from './App'
 import router from './router'
 import store from './store/index'
 import 'iview/dist/styles/iview.css';//引入
+import axios from 'axios';
+import qs from 'qs';
+Vue.prototype.$axios =axios;
+Vue.prototype.$qs = qs;
+// axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 Vue.config.productionTip = false
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
   store,
-  
   components: { App },
   template: '<App/>'
 })

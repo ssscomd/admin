@@ -15,15 +15,15 @@ export default {
 }
 </script>
 <style lang="less" scoped="scoped">
-    .compileWrapper{                  
-        width:1216px;
-        height:762px;
+    .compileWrapper{  
         position: fixed;
-        box-sizing: border-box;
-        left : 320px;
+        left : 230px;
         right : 0;
-        top : 100px;
-        bottom : 0;
+        top : 60px;
+        bottom : 0;                
+        width:100%;
+        height:762px;
+        box-sizing: border-box;
         background:#dfdfdf;    
         padding-left:20px;
         padding-right:20px;  
