@@ -12,25 +12,17 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-<<<<<<< HEAD
     "/yudonghe" : { //暗号
       target : "http://www.yudonghe.top:80", // 要转发的目标路径
       changeOrigin : "true", // 改变请求源
       pathRewrite : {"^/yudonghe" : ""} // 路径重写
       },
-=======
-      '/yudonghe':{
-        target:'http://www.yudonghe.top:80',
-        changeOrigin:true,
-        pathRewrite:{'^/yudonghe':''}
-      }
->>>>>>> 106e8145ea73221e8a0394bbc96f55af70c98259
     },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
-    autoOpenBrowser: false,
+    autoOpenBrowser: true,
     errorOverlay: true,
     notifyOnErrors: true,
     poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-
@@ -58,7 +50,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: './',
 
     /**
      * Source Maps
