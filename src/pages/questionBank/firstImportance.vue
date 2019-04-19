@@ -1,11 +1,14 @@
-<template>
-    <h3>
-        这里是评价{{currentRoute}}管理
-    </h3>
+﻿<template>
+    <Header></Header>
 </template>
 <script>
+import Header from '@/components/questionbank/header.vue'
+//import Header from '@/components/questionbank/newpage.vue'
     export default {
         name: "evaluateObject",
+        components:{
+            Header
+        },
         data() {
             return {currentRoute: this.$route.path};
         },
