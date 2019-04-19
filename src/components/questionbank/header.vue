@@ -139,7 +139,7 @@ export default {
   .ti{
       width: 1583px;
       height: 862px;
-      background: red;
+      background: #c7c7c7;
       margin-top: 40px;
       .top{
           width: 100%;
